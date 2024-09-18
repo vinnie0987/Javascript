@@ -1,0 +1,27 @@
+function mergeObjects(...objs){
+
+    var mergedObject = {};
+
+    //1. create a new array taking in all arguments
+    //2. copy the arguments from the array to a new array
+    //3. before we copy,we must check if the key exists and if it really has that key only/its not supposed to be inherited
+
+    for(var i = 0; i < arguments.length;i++){
+        var currentobject = arguments[i];
+
+        for(var key in currentobject){
+            if(currentobject.hasOwnProperty(key)){
+                mergeObjects[key] = currentobject[key];
+            }
+
+        }
+}
+return mergedObject;
+
+
+}
+
+
+const obj1 = {a:1, b: 2};
+const obj2 = {b:3, c:4};
+console.log(mergeObjects(obj1,obj2));
