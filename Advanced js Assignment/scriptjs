@@ -1,0 +1,53 @@
+
+
+
+
+async function fetchData() {
+    try {
+      const response = await fetch('http://localhost:3000/events');
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      const data = await response.json();
+      renderEvents(data); // Handle the data here, e.g., render it to the UI
+    } catch (error) {
+      console.error('There has been a problem with your fetch operation:', error);
+    }
+  }
+
+  
+function renderEvents(events) {
+  const eventContainer = document.getElementById('eventContainer');
+  eventContainer.innerHTML = ''; 
+
+  events.forEach(event => {
+    
+    const eventDiv = document.createElement('div');
+    eventDiv.classList.add('event-item');
+
+    
+    eventDiv.innerHTML = `
+      <img  src="${event.imageUrl}" alt="${event.title}" class="event-image">
+      <h3>${event.title}</h3>
+      <p><strong>Date:</strong> ${event.date}</p>
+      <p><strong>Location:</strong> ${event.location}</p>
+      <p><strong>Company:</strong> ${event.company}</p>
+      <p><strong>Price:</strong> $${event.price}</p>
+    `;
+
+    
+    eventContainer.appendChild(eventDiv);
+  });
+}
+  
+  fetchData();
+
+
+
+
+
+
+
+
+
+  
