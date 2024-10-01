@@ -1,0 +1,19 @@
+function filterAndSort(filterFn, ...numbers) {
+
+    let filteredNumbers = numbers.filter(filterFn);
+    
+   //sort
+    let sortedNumbers = filteredNumbers.sort(function(a, b) {
+      return a - b;
+    });
+  
+    return sortedNumbers;
+  }
+  
+  function isEven(num) {
+    return num % 2 === 0;
+  }
+  
+
+console.log(filterAndSort(isEven, 5,3,8,6,2));
+  

@@ -1,0 +1,28 @@
+function combineArrays(){
+
+    var combinedarr = [];
+
+    for(i=0; i < combineArrays.length; i++){
+        var currentnewarry = arguments[i];
+        combinedarr = combineArrays.concat(currentnewarry);
+
+}
+
+// remove duplicates
+
+var removeddup  = [];
+
+for(var j = 0 ; j < combinedarr.length;j++){
+    var element = combinedarr[j];
+    if(removeddup.indexOf(element) === -1){
+        removeddup.push(element);
+    }
+}
+
+return removeddup;
+
+
+    }
+
+
+    
