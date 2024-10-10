@@ -1,0 +1,20 @@
+const EventEmitter = require('events');
+const LogEvents = require('./LogEvents');
+
+
+
+const eventEmitter = new EventEmitter();
+
+
+
+eventEmitter.on('logEvent',async(message) =>{
+    await LogEvents(message);     // call LogEvents with the message
+
+});
+
+
+
+setTimeout(() => {
+    eventEmitter.emit('logEvent','new log event emitted'); 
+}, 2000);
+
