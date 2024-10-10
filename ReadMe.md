@@ -4,5 +4,6 @@ This is a compilation of all the images from the using xata database assignment.
 This is my xata database and table
 ![](./imagesxata/xata1.JPG)
    
+
 Below is a screenshot of a sample delete request.
-![](./imagesxata/deletexata.JPG)
+![](./imagesxata/deletexata.PNG)
