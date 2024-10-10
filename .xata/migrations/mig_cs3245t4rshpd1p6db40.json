@@ -1,0 +1,26 @@
+{
+  "done": true,
+  "migration": {
+    "name": "mig_cs3245t4rshpd1p6db40",
+    "operations": [
+      {
+        "add_column": {
+          "table": "events",
+          "column": {
+            "pk": false,
+            "name": "price ",
+            "type": "int",
+            "unique": false,
+            "comment": "",
+            "nullable": true
+          }
+        }
+      }
+    ]
+  },
+  "migrationType": "pgroll",
+  "name": "mig_cs3245t4rshpd1p6db40",
+  "parent": "mig_cs3241t4rshpd1p6db30",
+  "schema": "public",
+  "startedAt": "2024-10-09T06:26:31.671737Z"
+}
