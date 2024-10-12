@@ -53,9 +53,13 @@ Usage
 You can use the API endpoints to manage events. The server will be running on http://localhost:3000, and you can access the API through the specified routes.
 
 GET /api/v1/events - Fetch all events
+
 GET /api/v1/events/:id - Fetch a single event by ID
+
 POST /api/v1/events - Create a new event
+
 PUT /api/v1/events/:id - Update an existing event by ID
+
 DELETE /api/v1/events/:id - Delete an event by ID
 
 
